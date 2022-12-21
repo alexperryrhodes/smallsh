@@ -249,25 +249,6 @@ char * variable_expansion (int pid, char *segment) {
 
   int new_index = 0;
 
-  // foo$$
-  // 000000000000000
-  // f00000000000000
-  // foo000000000000
-  // foo123450000000
-  //
-  // $$$$$$
-  // 000000000000000
-  // 123450000000000
-  // 123451234500000
-  // 123451234512345
-  //
-  // $$foo
-  // 0000000000000000
-  // 1234500000000000
-  // 12345f0000000000
-  // 12345fo000000000
-  // 12345foo00000000
-
   // Loop through orginal segement
   for(int orig_index = 0; orig_index < seg_length; ) {
     
